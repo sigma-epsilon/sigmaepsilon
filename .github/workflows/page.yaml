@@ -43,27 +43,6 @@ jobs:
           cd docs
           poetry run make html
 
-      - name: Resolve symlinks and hard links in docs/build/html
-        run: |
-          cp -rL docs/build/html /tmp/resolved_html
-          rm -rf docs/build/html/*
-          mv /tmp/resolved_html/* docs/build/html/
-
-      - name: Ensure no symlinks in build
-        run: |
-          find docs/build/html -type l -exec rm -f {} +
-
-      - name: Check artifact size
-        run: |
-          du -sh docs/build/html
-
-      # Step 5: Upload the built documentation as an artifact
-      - name: Upload Sphinx documentation as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: github-pages
-          path: docs/build/html
-
   deploy:
     # Add a dependency to the build job
     name: Deploy Documentation
@@ -77,5 +56,5 @@ jobs:
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _build/
+          publish_dir: docs/build/html
           force_orphan: true
