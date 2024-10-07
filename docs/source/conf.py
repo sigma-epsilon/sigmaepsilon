@@ -46,6 +46,9 @@ extensions = [
     "sphinx_inline_tabs",
 ]
 
+# ensures that the files are copied, not symlinked
+html_copy_source = True
+
 templates_path = ["_templates"]
 
 exclude_patterns = ["_build"]
