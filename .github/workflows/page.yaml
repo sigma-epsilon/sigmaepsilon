@@ -41,9 +41,7 @@ jobs:
 
       # Step 4: Build the Sphinx documentation
       - name: Build the documentation
-        run: |
-          cd docs
-          poetry run make html
+        run: poetry run sphinx-build docs/source _build
 
   deploy:
     # Add a dependency to the build job
@@ -58,5 +56,5 @@ jobs:
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/build/html
+          publish_dir: _build
           force_orphan: true
