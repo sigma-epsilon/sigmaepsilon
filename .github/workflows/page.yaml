@@ -43,6 +43,12 @@ jobs:
         run: |
           cd docs
           poetry run make html
+      
+      - name: Resolve symlinks and hard links in docs/build/html
+        run: |
+          cp -rL docs/build/html /tmp/resolved_html
+          rm -rf docs/build/html/*
+          mv /tmp/resolved_html/* docs/build/html/
 
       - name: Ensure no symlinks in build
         run: |
