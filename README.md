@@ -1,4 +1,4 @@
-# **SigmaEpsilon** - A Python ecosystem of libraries for computational engineering
+# **SigmaEpsilon** - An Ecosystem of Python Libraries for Computational Engineering
 
 SigmaEpsilon is a collection of interrelated libraries to create an ecosystem of tools that make computational engineering more accessible and to provide the necessary technical background for meaningful research in the topic.
 
