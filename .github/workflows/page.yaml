@@ -9,6 +9,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     name: Build Documentation
@@ -34,8 +37,7 @@ jobs:
 
       # Step 3: Install dependencies using Poetry
       - name: Install dependencies
-        run: |
-          poetry install --with docs
+        run: poetry install --with docs
 
       # Step 4: Build the Sphinx documentation
       - name: Build the documentation
