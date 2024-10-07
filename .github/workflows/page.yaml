@@ -48,7 +48,7 @@ jobs:
       - name: Upload Sphinx documentation as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: sphinx-docs
+          name: github-pages
           path: docs/build/html
 
   deploy:
