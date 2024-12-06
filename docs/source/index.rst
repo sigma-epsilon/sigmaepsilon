@@ -8,8 +8,10 @@
    :maxdepth: 1
    :hidden:
 
-   User Guide <user_guide/index.rst>
-   Developer Guide <developer_guide/index.rst>
+   Solutions <solutions.rst>
+   Documentation <user_guide/index.rst>
+   Development <developer_guide/index.rst>
+   About Us <about.rst>
 
 .. note::
 

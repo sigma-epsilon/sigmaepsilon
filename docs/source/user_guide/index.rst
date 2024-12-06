@@ -1,8 +1,8 @@
 .. _user_guide:
 
-==========
-User Guide
-==========
+=============
+Documentation
+=============
 
 .. note::
 

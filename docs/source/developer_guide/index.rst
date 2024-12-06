@@ -23,10 +23,9 @@ steps involved in contributing to the ecosystem.
 
 .. toctree::
     :maxdepth: 1
-    :caption: Contents
+    :caption: Developer Guide
     
     dev.overview
-    dev.installation
     dev.enviroment
     dev.package_management
     dev.coding

@@ -3,3 +3,4 @@
 .. _sigmaepsilon.mesh: https://sigmaepsilon.mesh.readthedocs.io/en/latest/
 .. _sigmaepsilon.solid.material: https://sigmaepsilon.solid.material.readthedocs.io/en/latest/
 .. _sigmaepsilon.solid.fourier: https://sigmaepsilon.solid.fourier.readthedocs.io/en/latest/
+.. _Poetry: https://python-poetry.org/
