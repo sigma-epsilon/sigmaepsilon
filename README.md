@@ -6,9 +6,9 @@ SigmaEpsilon is a collection of interrelated libraries to create an ecosystem of
 
 ## Modules
 
-The namespace consists of the following packages:
+The SigmaEpsilon namespace is an ecosystem of tools, consisting of the following sub-namespaces:
 
-- **sigmaepsilon.core** - common developer utilities
+- **sigmaepsilon.core** - common developer utilities for all projects in the ecosystem
 - **sigmaepsilon.math** - mathematical solutions to all kinds of problems, mainly centered around linear algebra and optimization
 - **sigmaepsilon.mesh** - a module to handle polygonal meshes
 - **sigmaepsilon.solid** - for numerical simulations in the field of computational solid mechanics
@@ -33,4 +33,4 @@ The project started off as a need for organizing my code during my PhD studies, 
 
 ## License
 
-All modules come with their own licence specification, and the corresponding documentation should be consulted for the details.
+While most libraries in the SigmaEpsilon ecosystem are distributed under the MIT license, some modules may have their own specific licensing terms. Please refer to the respective documentation for detailed information.
