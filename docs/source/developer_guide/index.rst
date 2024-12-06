@@ -1,12 +1,8 @@
 .. _developer_guide:
 
-===============
-Developer Guide
-===============
-
-.. note::
-
-   This page is currently under construction. Some sections might be incomplete or subject to change.
+===========
+Development
+===========
 
 The Developer Guide is a collection of documents that provide detailed information on how to contribute to the
 development of the SigmaEpsilon ecosystem. Since all the libraries in the ecosystem follow the same development
