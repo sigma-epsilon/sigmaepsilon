@@ -27,9 +27,7 @@ steps involved in contributing to the ecosystem.
     
     dev.overview
     dev.installation
-    dev.enviroment
     dev.poetry
-    dev.coding
     dev.documenting
     dev.testing
     dev.versioning
