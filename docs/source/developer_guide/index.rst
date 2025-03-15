@@ -33,3 +33,5 @@ steps involved in contributing to the ecosystem.
     dev.documenting
     dev.testing
     dev.versioning
+    dev.workflow
+    dev.quality

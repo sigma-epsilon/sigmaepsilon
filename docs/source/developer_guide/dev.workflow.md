@@ -1,4 +1,4 @@
-# Staging and Release Workflow for Open-Source Python Project with CircleCI
+# Staging and Release Workflow with CircleCI
 
 This document describes how to manage the staging and release workflow for an open-source Python project published on PyPI using **CircleCI**.
 
@@ -6,19 +6,22 @@ This document describes how to manage the staging and release workflow for an op
 
 ## Branching Strategy
 
-### Main Branches:
+### Main Branches
+
 1. **`main`**:
+
    - Contains stable releases published to **PyPI**.
    - Only updated when a stable release is ready.
 
-2. **`develop`**:
+2. **`dev`**:
    - Used for active development and integration.
    - Pre-releases to **TestPyPI** are tagged and published from here.
 
-### Supporting Branches:
+### Supporting Branches
+
 - **Feature Branches (`feature/*`)**:
   - For developing new features or changes.
-  - Merged into `develop` when complete.
+  - Merged into `dev` when complete.
 
 ---
 
@@ -39,17 +42,20 @@ Use **Semantic Versioning (SemVer)**:
 ## Workflow Steps
 
 ### 1. Development Phase
+
 - Work on new features in `feature/*` branches.
-- Merge features into the `develop` branch.
+- Merge features into the `dev` branch.
 - Run tests and validations in CI/CD pipelines.
 
 ### 2. Pre-Release to TestPyPI
+
 - When ready for testing, tag a pre-release version (e.g., `v1.2.0-beta1`) on the `develop` branch.
 - CircleCI automatically publishes the package to **TestPyPI** for validation.
 
 ### 3. Final Release to PyPI
+
 - When the release is stable:
-  1. Merge `develop` into `main`.
+  1. Merge `dev` into `main`.
   2. Tag the release with a stable version (e.g., `v1.2.0`).
   3. CircleCI automatically publishes the package to **PyPI**.
 
@@ -57,11 +63,13 @@ Use **Semantic Versioning (SemVer)**:
 
 ## Tag-Driven Release Workflow
 
-### Tag Naming:
+### Tag Naming
+
 - **Pre-Releases**: Use tags like `v1.2.0-alpha1`, `v1.2.0-beta1`, `v1.2.0-rc1`.
 - **Stable Releases**: Use tags like `v1.2.0`.
 
-### CI/CD Behavior:
+### CI/CD Behavior
+
 1. **Pre-Release Tags** (`-alpha`, `-beta`, `-rc`):
    - Trigger publishing to **TestPyPI**.
 2. **Stable Tags** (e.g., `v1.2.0`):
@@ -152,3 +160,4 @@ workflows:
           filters:
             tags:
               only: /^v[0-9]+\.[0-9]+\.[0-9]+$/
+```
