@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../sigmaepsilon.core"
+		},
+		{
+			"path": "../sigmaepsilon.deepdict"
+		},
+		{
+			"path": "../sigmaepsilon.math"
+		},
+		{
+			"path": "../sigmaepsilon.mesh"
+		},
+		{
+			"path": "../sigmaepsilon.solid.material"
+		},
+		{
+			"path": "../sigmaepsilon.solid.fourier"
+		},
+		{
+			"path": "../sigmaepsilon.solid.fem"
+		}
+	],
+	"settings": {}
+}

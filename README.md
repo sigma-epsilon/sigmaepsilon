@@ -15,6 +15,19 @@ The SigmaEpsilon namespace is an ecosystem of tools, consisting of the following
 
 Each of these packages comes with their own documentation, where you can find all information on installation, usage, etc.
 
+## Installation
+
+Every package of the namespace can be installed standalone, e.g. `pip install sigmaepsilon.mesh`. Alternatively, the `sigmaepsilon` metapackage installs a compatible set of them:
+
+```console
+pip install sigmaepsilon          # core, deepdict, math
+pip install sigmaepsilon[mesh]    # + mesh
+pip install sigmaepsilon[solid]   # + solid.material, solid.fem, solid.fourier
+pip install sigmaepsilon[all]     # everything
+```
+
+The metapackage contains no code of its own, it only declares dependencies.
+
 ## Acknowledgements
 
 Each module of the namespace comes with a set of dependencies, but almost all of them heavily relies on the cornerstones of scientific computing libraries such as `NumPy` and `SciPy`, etc.

@@ -1,28 +1,66 @@
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
 
-[tool.poetry]
+# This is a metapackage: the wheel contains no modules, only dependency metadata.
+# It must never ship a `sigmaepsilon/__init__.py`, as that would break the
+# implicit (PEP 420) namespace shared by all `sigmaepsilon.*` distributions.
+
+[project]
 name = "sigmaepsilon"
-package-mode = false
+version = "1.0.0"
+description = "Metapackage for the SigmaEpsilon ecosystem of Python libraries for computational engineering."
+readme = "README.md"
 license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10,<3.13"
+authors = [{ name = "Bence Balogh", email = "bencebalogh@sigmaepsilon.com" }]
+maintainers = [{ name = "Bence Balogh", email = "bencebalogh@sigmaepsilon.com" }]
 keywords = ["computational engineering"]
-homepage = "https://github.com/sigma-epsilon/sigmaepsilon"
-repository = "https://github.com/sigma-epsilon/sigmaepsilon"
-documentation = "https://sigmaepsilon.readthedocs.io/en/latest/?badge=latest"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "sigmaepsilon.core>=1.2.2,<2",
+    "sigmaepsilon.deepdict>=3.0.1,<4",
+    "sigmaepsilon.math>=2.2.1,<3",
+]
 
-[tool.poetry.dependencies]
-python = ">=3.10,<3.13"
+[project.optional-dependencies]
+mesh = ["sigmaepsilon.mesh>=3.1.0,<4"]
+material = ["sigmaepsilon.solid.material>=1.0.2,<2"]
+fem = ["sigmaepsilon.solid.fem>=1.0.5,<2"]
+fourier = ["sigmaepsilon.solid.fourier>=2.2.0,<3"]
+solid = ["sigmaepsilon[material,fem,fourier]"]
+all = ["sigmaepsilon[mesh,solid]"]
 
-[tool.poetry.group.docs.dependencies]
-ipython = "^8.21.0"
-myst-parser = "^2.0.0"
-nbsphinx = "^0.9.3"
-sphinx-gallery = "^0.15.0"
-sphinx-copybutton = "^0.5.2"
-sphinxcontrib-bibtex = "^2.6.2"
-nbsphinx-link = "^1.3.0"
-sphinxcontrib-svg2pdfconverter = "^1.2.2"
-sphinx-inline-tabs = "^2023.4.21"
-pydata-sphinx-theme = "^0.15.2"
-sphinx-design = "^0.6.1"
+[project.urls]
+Homepage = "https://github.com/sigma-epsilon/sigmaepsilon"
+Repository = "https://github.com/sigma-epsilon/sigmaepsilon"
+Documentation = "https://sigmaepsilon.readthedocs.io/en/latest/"
+
+[dependency-groups]
+docs = [
+    "ipython>=8.21.0,<9",
+    "myst-parser>=2.0.0,<3",
+    "nbsphinx>=0.9.3,<0.10",
+    "sphinx-gallery>=0.15.0,<0.16",
+    "sphinx-copybutton>=0.5.2,<0.6",
+    "sphinxcontrib-bibtex>=2.6.2,<3",
+    "nbsphinx-link>=1.3.0,<2",
+    "sphinxcontrib-svg2pdfconverter>=1.2.2,<2",
+    "sphinx-inline-tabs>=2023.4.21",
+    "pydata-sphinx-theme>=0.15.2,<0.16",
+    "sphinx-design>=0.6.1,<0.7",
+]
+
+[tool.hatch.build.targets.wheel]
+bypass-selection = true
+
+[tool.hatch.build.targets.sdist]
+include = ["pyproject.toml", "README.md", "LICENSE"]
