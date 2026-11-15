@@ -20,12 +20,12 @@
 This is the general documentation for the **SigmaEpsilon** ecosystem of Python libraries for computational 
 engineering. The ecosystem is composed of the following libraries:
 
-- sigmaepsilon.core
-- sigmaepsilon.math
-- sigmaepsilon.mesh
-- sigmaepsilon.solid.fem
-- sigmaepsilon.solid.material
-- sigmaepsilon.solid.fourier
+- `sigmaepsilon.core`_
+- `sigmaepsilon.math`_
+- `sigmaepsilon.mesh`_
+- `sigmaepsilon.solid.fem`_
+- `sigmaepsilon.solid.material`_
+- `sigmaepsilon.solid.fourier`_
 
 Each of these libraries come with their own documentation, which can be accessed by clicking on the links above.
 

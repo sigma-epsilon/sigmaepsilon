@@ -8,12 +8,15 @@ SigmaEpsilon is a collection of interrelated libraries to create an ecosystem of
 
 The SigmaEpsilon namespace is an ecosystem of tools, consisting of the following sub-namespaces:
 
-- **sigmaepsilon.core** - common developer utilities for all projects in the ecosystem
-- **sigmaepsilon.math** - mathematical solutions to all kinds of problems, mainly centered around linear algebra and optimization
-- **sigmaepsilon.mesh** - a module to handle polygonal meshes
+- **[sigmaepsilon.core](https://sigmaepsiloncore.readthedocs.io/en/latest/)** - common developer utilities for all projects in the ecosystem
+- **[sigmaepsilon.math](https://sigmaepsilonmath.readthedocs.io/en/latest/)** - mathematical solutions to all kinds of problems, mainly centered around linear algebra and optimization
+- **[sigmaepsilon.mesh](https://sigmaepsilonmesh.readthedocs.io/en/latest/)** - a module to handle polygonal meshes
 - **sigmaepsilon.solid** - for numerical simulations in the field of computational solid mechanics
+  - **[sigmaepsilon.solid.material](https://sigmaepsilonsolidmaterial.readthedocs.io/en/latest/)** - material models and sections
+  - **[sigmaepsilon.solid.fem](https://sigmaepsilonsolidfem.readthedocs.io/en/latest/)** - the finite element method for solid structures
+  - **[sigmaepsilon.solid.fourier](https://sigmaepsilonsolidfourier.readthedocs.io/en/latest/)** - semi-analytical Fourier series solutions for beams and plates
 
-Each of these packages comes with their own documentation, where you can find all information on installation, usage, etc.
+Each of these packages comes with their own documentation, linked above, where you can find all information on installation, usage, etc.
 
 ## Installation
 

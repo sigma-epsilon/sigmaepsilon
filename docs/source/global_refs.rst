@@ -1,6 +1,6 @@
-.. _sigmaepsilon.core: https://sigmaepsilon.core.readthedocs.io/en/latest/
-.. _sigmaepsilon.math: https://sigmaepsilon.math.readthedocs.io/en/latest/
-.. _sigmaepsilon.mesh: https://sigmaepsilon.mesh.readthedocs.io/en/latest/
-.. _sigmaepsilon.solid.material: https://sigmaepsilon.solid.material.readthedocs.io/en/latest/
-.. _sigmaepsilon.solid.fourier: https://sigmaepsilon.solid.fourier.readthedocs.io/en/latest/
-.. _Poetry: https://python-poetry.org/
+.. _sigmaepsilon.core: https://sigmaepsiloncore.readthedocs.io/en/latest/
+.. _sigmaepsilon.math: https://sigmaepsilonmath.readthedocs.io/en/latest/
+.. _sigmaepsilon.mesh: https://sigmaepsilonmesh.readthedocs.io/en/latest/
+.. _sigmaepsilon.solid.material: https://sigmaepsilonsolidmaterial.readthedocs.io/en/latest/
+.. _sigmaepsilon.solid.fem: https://sigmaepsilonsolidfem.readthedocs.io/en/latest/
+.. _sigmaepsilon.solid.fourier: https://sigmaepsilonsolidfourier.readthedocs.io/en/latest/
